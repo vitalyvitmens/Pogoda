@@ -22,10 +22,10 @@ b = wind
 c = ((w.wind()["speed"]) * 3.6)
 
 print("\nГОРОД-ГЕРОЙ МИНСК: ")
-print("Температура: " + str(round(a)) + "°C")
-print("Влажность: " + str(w.humidity) + " %")
-print("Скорость ветра: " + str(round(b)) + " м/с" + " = " + str(round(c)) + " км/час")
-print("Сейчас " + str(w.detailed_status))
+print(f"Температура: {str(round(a))}°C")
+print(f"Влажность: {str(w.humidity)}%")
+print(f"Скорость ветра: {str(round(b))}м/с = {str(round(c))}км/час")
+print(f"Сейчас {str(w.detailed_status)}")
 
 place = input(
     "\n!!! ПРОГРАММА ПОГОДА ОНЛАЙН ПРИВЕТСТВУЕТ ВАС !!!\nНапишите название города или страны и нажимайте ENTER: ")
@@ -39,10 +39,10 @@ a = temp
 b = wind
 c = ((w.wind()["speed"]) * 3.6)
 
-print("Температура: " + str(round(a)) + "°C")
-print("Влажность: " + str(w.humidity) + " %")
-print("Скорость ветра: " + str(round(b)) + " м/с" + " = " + str(round(c)) + " км/час")
-print("Сейчас: " + str(w.detailed_status))
+print(f"Температура: {str(round(a))}°C")
+print(f"Влажность: {str(w.humidity)}%")
+print(f"Скорость ветра: {str(round(b))}м/с = {str(round(c))}км/час")
+print(f"Сейчас: {str(w.detailed_status)}")
 
 if temp < 0:
     print("!!! МОРОЗ !!! ОДЕВАЙ: ШАПКУ УШАНКУ + ФУФАЙКУ + ВАЛЕНКИ !!!")
