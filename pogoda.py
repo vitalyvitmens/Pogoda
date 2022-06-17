@@ -1,5 +1,6 @@
 from pyowm import OWM
 from pyowm.utils.config import get_default_config
+
 # from tkinter import *
 # root = Tk()
 # root.mainloop()
@@ -17,14 +18,12 @@ w = observation.weather
 
 temp = w.temperature('celsius')["temp"]
 wind = w.wind()["speed"]
-a = temp
-b = wind
-c = ((w.wind()["speed"]) * 3.6)
+wind_km_h = (w.wind()["speed"]) * 3.6
 
 print("\nГОРОД-ГЕРОЙ МИНСК: ")
-print(f"Температура: {str(round(a))}°C")
+print(f"Температура: {str(round(temp))}°C")
 print(f"Влажность: {str(w.humidity)}%")
-print(f"Скорость ветра: {str(round(b))}м/с = {str(round(c))}км/час")
+print(f"Скорость ветра: {str(round(wind))}м/с = {str(round(wind_km_h))}км/час")
 print(f"Сейчас {str(w.detailed_status)}")
 
 place = input(
@@ -35,13 +34,11 @@ w = observation.weather
 
 temp = w.temperature('celsius')["temp"]
 wind = w.wind()["speed"]
-a = temp
-b = wind
-c = ((w.wind()["speed"]) * 3.6)
+wind_km_h = (w.wind()["speed"]) * 3.6
 
-print(f"Температура: {str(round(a))}°C")
+print(f"Температура: {str(round(temp))}°C")
 print(f"Влажность: {str(w.humidity)}%")
-print(f"Скорость ветра: {str(round(b))}м/с = {str(round(c))}км/час")
+print(f"Скорость ветра: {str(round(wind))}м/с = {str(round(wind_km_h))}км/час")
 print(f"Сейчас: {str(w.detailed_status)}")
 
 if temp < 0:
