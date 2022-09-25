@@ -4,7 +4,9 @@ from pyowm.commons.exceptions import NotFoundError
 
 config_dict = get_default_config()
 config_dict['language'] = 'ru'
-owm = OWM('4707c215225f3783a2e45a56dd73e1b2', config_dict)
+with open('config', 'r') as f:
+    API_key = f.read()
+owm = OWM(API_key, config_dict)
 mgr = owm.weather_manager()
 
 observation = mgr.weather_at_place(str("minsk"))
